@@ -9,7 +9,8 @@ Artist.delete_all()
 
 artist1 = Artist.new({
   "name" => "Carrie Underwood"
-})
+}
+)
 
 artist1.save()
 
@@ -22,11 +23,28 @@ album1 = Album.new(
 )
 album1.save()
 
-album1.genre = "Rap"
-album1.update()
+# album1.genre = "Rap"
+# album1.update()
 
-artist1.name = "Drake"
-artist1.update()
+# artist1.name = "Drake"
+# artist1.update()
+
+artist2 = Artist.new({
+  "name" => "Migos"
+  }
+)
+
+artist2.save()
+
+album2 = Album.new(
+  {
+    "title" => "Kulture II",
+    "genre" => "Rap",
+    "artist_id" => artist2.id
+  }
+)
+
+album2.save()
 
 
 
