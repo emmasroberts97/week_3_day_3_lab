@@ -2,6 +2,10 @@ require("pry")
 require_relative("models/album.rb")
 require_relative("models/artist.rb")
 
+Album.delete_all()
+Artist.delete_all()
+
+
 
 artist1 = Artist.new({
   "name" => "Carrie Underwood"
@@ -17,6 +21,14 @@ album1 = Album.new(
   }
 )
 album1.save()
+
+album1.genre = "Rap"
+album1.update()
+
+artist1.name = "Drake"
+artist1.update()
+
+
 
 
 
